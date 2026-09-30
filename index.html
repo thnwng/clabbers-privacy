@@ -17,91 +17,303 @@
   }
   h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 0.25rem; }
   h2 { font-size: 1.15rem; margin: 2rem 0 0.5rem; }
+  h3 { font-size: 1rem; margin: 1.25rem 0 0.25rem; }
   p, li { margin: 0.5rem 0; }
   ul { padding-left: 1.25rem; }
   .meta { opacity: 0.7; font-size: 0.9rem; margin-bottom: 2rem; }
   code { font-family: ui-monospace, Consolas, monospace; font-size: 0.95em; }
+  nav ol { padding-left: 1.25rem; margin: 0.5rem 0 1.5rem; }
+  nav li { margin: 0.15rem 0; }
 </style>
 </head>
 <body>
 <h1>Clabbers Privacy Policy</h1>
-<p class="meta">Applies to the Clabbers app (package <code>dev.clabbers.app</code>) and the Clabbers website. Effective 2026-09-27.</p>
+<p class="meta">Applies to the Clabbers apps for Android (package <code>dev.clabbers.app</code>), iOS, Windows and macOS, and to the Clabbers website at <code>clabbers.app</code>. Effective 2026-10-01.</p>
 
-<p>Clabbers is a word-study app. It is built to work offline, and it collects as little
-data as possible: no ads, no analytics, no tracking, and no account unless you choose
-to create one.</p>
+<p>Clabbers is an independent word-study app for competitive word-game players. This page
+explains, in plain terms, what information Clabbers handles, why, who else processes it for
+us, how long we keep it, and how to delete it.</p>
 
-<h2>Data stored on your device</h2>
-<p>Your study data — word lists, flashcards, scheduling state, statistics, and app
-settings — is stored locally on your device. If you never sign in, none of it leaves
-your device.</p>
-
-<h2>Optional account and sync</h2>
-<p>You can optionally create an account (email address and password) to sync your study
-progress between devices. If you do:</p>
+<h2 id="summary">In short</h2>
 <ul>
-  <li>Your email address and password are handled by our authentication provider,
-  Supabase. We never see or store your password in plain text.</li>
-  <li>Your study data (cards, scheduling state, word lists, settings, and statistics)
-  is synced to and stored on the Clabbers server so your other signed-in devices can
-  retrieve it.</li>
-  <li>This data is used only to provide the sync feature. It is never sold, shared
-  with third parties for their own use, or used for advertising.</li>
+  <li>No advertising, no third-party analytics or tracking tools, no advertising ID, and we
+  never sell your data.</li>
+  <li>The apps work without an account. Your study data stays on your device unless you sign
+  in (a guest sign-in counts as signing in).</li>
+  <li>The website needs a sign-in, an account or a guest, because it keeps your study data on
+  our server.</li>
+  <li>You can delete your account and everything our server keeps for it at any time, in the
+  app, on the website, or by email.</li>
 </ul>
 
-<h2>Display name</h2>
-<p>An account can have a display name. Other players see it on the daily puzzles'
-leaderboards, beside your scores, and in Versus matches. Leave it blank to stay off the
-leaderboards; in Versus you then appear as "Player".</p>
+<nav aria-label="Contents">
+<ol>
+  <li><a href="#contact">Who we are</a></li>
+  <li><a href="#device">Data that stays on your device</a></li>
+  <li><a href="#accounts">Accounts and sign-in</a></li>
+  <li><a href="#server">What our server keeps when you sign in</a></li>
+  <li><a href="#others">What other players can see</a></li>
+  <li><a href="#contact-form">The Contact page</a></li>
+  <li><a href="#email">Emails we send</a></li>
+  <li><a href="#downloads">Downloads and updates</a></li>
+  <li><a href="#providers">Service providers</a></li>
+  <li><a href="#logs">IP addresses and logs</a></li>
+  <li><a href="#browser">Browser storage on the website</a></li>
+  <li><a href="#permissions">Device permissions</a></li>
+  <li><a href="#retention">How long we keep data</a></li>
+  <li><a href="#delete">Deleting your account and data</a></li>
+  <li><a href="#security">Security</a></li>
+  <li><a href="#children">Children</a></li>
+  <li><a href="#choices">Your choices</a></li>
+  <li><a href="#changes">Changes to this policy</a></li>
+</ol>
+</nav>
 
-<h2>Contact form</h2>
-<p>If you use the in-app Contact page, we receive what you submit: the topic, your
-message, an optional reply email address, the platform you are on, and any screenshots
-you choose to attach. For bug reports, you can optionally tick a box to attach a
-diagnostics report — it contains technical information only (app version and build,
-platform type, sync status, and a log of recent in-app technical events), and it is
-sent only when you tick that box.</p>
-
-<h2>What we do not do</h2>
-<ul>
-  <li>No advertising and no ad networks.</li>
-  <li>No third-party analytics or tracking SDKs.</li>
-  <li>No selling or renting of your data, ever.</li>
-  <li>No tracking of you across other apps or websites.</li>
-</ul>
-
-<h2>Data retention and deleting your data</h2>
-<p><strong>Deleting your account in the app:</strong> open Settings, then Account, then
-Delete account, on the website or in the app. Type your email address and the word
-<code>delete</code>, then enter your password (or sign in with Google again); a guest
-account types <code>delete</code> only. The account and everything it keeps on our server
-are deleted at once: your cards and review history, decks, settings, daily scores and
-Versus history. This cannot be undone.</p>
-<p><strong>By email:</strong> if you cannot use the app, send a request from the in-app
-Contact page or email <a href="mailto:clabbersapp@gmail.com">clabbersapp@gmail.com</a> from
-the address you signed up with. We delete the account the same way and confirm by
-reply.</p>
-<p><strong>What stays after a deletion:</strong> other players' Versus histories keep their
-record of matches they played against you, with your display name. Each device keeps its
-own copy of your study data, which the app goes on using offline, until you clear the
-app's data or uninstall it.</p>
-<p><strong>On-device data:</strong> delete it at any time by clearing the app's data in
-your device settings or uninstalling the app.</p>
-
-<h2>Security</h2>
-<p>All communication between the app and our servers uses HTTPS. Account credentials
-are managed by Supabase's authentication service.</p>
-
-<h2>Children</h2>
-<p>Clabbers is not directed at children under 13, and we do not knowingly collect
-personal information from them.</p>
-
-<h2>Changes to this policy</h2>
-<p>If this policy changes, the new version will be published at this address with an
-updated effective date.</p>
-
-<h2>Contact</h2>
-<p>Questions about this policy or your data:
+<h2 id="contact">1. Who we are</h2>
+<p>Clabbers is made and run by a small independent team. For any question about this policy
+or your data, or to make a request, email
 <a href="mailto:clabbersapp@gmail.com">clabbersapp@gmail.com</a>.</p>
+
+<h2 id="device">2. Data that stays on your device</h2>
+<p>The apps keep your study data in a database on your device: your cards and their
+scheduling state, your review history, decks, saved lists, notes you write on cards, study
+goals, game history and settings. If you never sign in, none of it leaves your device.</p>
+<ul>
+  <li>The on-device database is encoded with a key built into the app. That keeps it from
+  being read casually, but it is not strong protection: your device's own lock screen and
+  storage encryption are what protect it.</li>
+  <li>Study reminders on phones are local notifications. The app works out how many cards are
+  due on the device; nothing is sent anywhere to schedule them. They are off until you turn
+  them on.</li>
+  <li>Some lists, such as the words you missed in Boggle and Wordwalls, never leave the device
+  even when you sign in.</li>
+  <li>If you import a word list or a file of your own, the app processes it on the device.</li>
+</ul>
+
+<h2 id="accounts">3. Accounts and sign-in</h2>
+<p>Signing in is optional in the apps and needed on the website. You can sign in with an
+email address and password, with Google, or as a guest ("Try it without an account").</p>
+<ul>
+  <li>Sign-in is handled by our authentication provider, Supabase. Your password goes only to
+  Supabase, which stores it in hashed form; the Clabbers server never receives it.</li>
+  <li>Supabase stores your email address and how you sign in. If you use Google, Supabase also
+  keeps the basic profile details Google shares at sign-in (your name, email address and
+  profile picture link). We ask Google for nothing more than that.</li>
+  <li>A guest account is a real account with no email address. You can add an email and
+  password to it later and keep what you have studied.</li>
+  <li>Our own database keeps, for each account: a random account ID, the sign-in ID from
+  Supabase, when the account was created, and your profile: an optional display name, whether
+  you want reminder emails, and your chosen reminder hour and time zone (the website saves your
+  time zone when you save the account settings, even with reminders off).</li>
+  <li>On a device, the app remembers which profile belongs to which account and labels it with
+  your display name or email address.</li>
+</ul>
+
+<h2 id="server">4. What our server keeps when you sign in</h2>
+<p>When you are signed in (as an account or a guest), your study data is kept on our server
+so that your devices and the website can share it. It includes:</p>
+<ul>
+  <li>your cards and their scheduling state, and your full review history (when you reviewed
+  each card, how you rated it, and how many answers you got or missed);</li>
+  <li>decks (names, folders, descriptions and the search they are built from), saved lists,
+  notes you write on cards, study goals and study activity;</li>
+  <li>your settings (appearance, study options and similar preferences);</li>
+  <li>Wordwalls and Boggle game history;</li>
+  <li>records of what you deleted, so the deletion reaches your other devices; a deleted card
+  can be restored for about 30 days;</li>
+  <li>a random ID for each installation of the app, used only to keep each device's changes
+  apart when they sync;</li>
+  <li>Daily puzzles: when you started, the words you entered or that were accepted, your
+  scores, times, streaks and days played;</li>
+  <li>Versus: the results of your matches (each player's display name, score and placing);</li>
+  <li>on the website only, for accounts with an email address (not guests): a short technical
+  log of recent app events and errors, the newest 500 per account, cleaned of personal details
+  before it is stored. We use it only to find and fix problems.</li>
+</ul>
+<p>We use this data only to run Clabbers: to sync your study, show the leaderboards, run
+Versus matches, check daily-puzzle answers, send the reminder emails you ask for, and fix
+problems. We do not use it for advertising or profiling, and we do not sell or share it for
+anyone else's purposes.</p>
+
+<h2 id="others">5. What other players can see</h2>
+<h3>Daily puzzle leaderboards</h3>
+<ul>
+  <li>Leaderboards are visible to anyone signed in to Clabbers, including guests, and past
+  days stay viewable.</li>
+  <li>You appear on them only if you have set a display name. They show your display name,
+  rank, score or number solved, time taken, the number of words you found or played, and
+  weekly totals, streaks and days played.</li>
+  <li>Without a display name you are not listed, but your result still counts when ranks are
+  worked out.</li>
+</ul>
+<h3>Versus</h3>
+<ul>
+  <li>Players in a match see each other's display name (or "Player" if none is set), live
+  scores and results. In Boggle Versus, everyone sees the words each player found once the
+  match ends.</li>
+  <li>The other players' apps also receive your internal account ID, a random code that does
+  not contain your email address or name.</li>
+  <li>Each player's match history keeps a record of the match, with the display names, scores
+  and placings of everyone in it.</li>
+</ul>
+
+<h2 id="contact-form">6. The Contact page</h2>
+<p>If you send us a message from the Contact page, we receive what you submit: the topic,
+your message, a reply email address if you give one (it is filled in from your account, and
+you can change or clear it), the platform you are on (for example android or desktop), and
+any images you choose to attach.</p>
+<ul>
+  <li>For a Bug Report, a box to attach a diagnostics report is ticked by default; untick it
+  to send your message without one. The report holds technical information only: the app
+  version and build, the platform, sync status, and a list of recent app events and errors,
+  with account IDs shortened and sign-in tokens removed. On the website it is a short
+  reference instead (version, a session code and the first characters of your account ID).</li>
+  <li>The message is sent to our support inbox (Gmail) by email through Resend. It is not
+  stored in the Clabbers database. It stays in our inbox until we delete it; ask us and we
+  will.</li>
+  <li>Our server uses your IP address, in memory only, to limit each connection to a few
+  messages an hour.</li>
+</ul>
+
+<h2 id="email">7. Emails we send</h2>
+<ul>
+  <li>Account emails from Supabase, delivered through Resend: sign-up confirmation, password
+  reset, and confirmation when you add or change your email address.</li>
+  <li>Due-card reminders, only if you turn on "Email me when I have cards due" in the website's
+  account settings (off by default). A reminder contains your display name, how many cards are
+  due, a link to study, and a one-click unsubscribe link, and is sent at most once a day.</li>
+  <li>Our replies, if you contact us.</li>
+</ul>
+<p>We do not send marketing email.</p>
+
+<h2 id="downloads">8. Downloads and updates</h2>
+<ul>
+  <li>Word lists that are not built into the app (for example NWL2023 on phones) download
+  from GitHub when you ask for them. GitHub sees your IP address and the app's standard
+  browser details; the app sends nothing else.</li>
+  <li>The Windows app checks GitHub for updates when it starts and installs them when you
+  quit. The update tool sends GitHub a random installation ID it creates for staged
+  roll-outs, along with your IP address. The portable Windows build does not check for
+  updates.</li>
+  <li>The desktop app can optionally write memory hooks or deck drafts with an AI model. It is
+  off by default. If you set it up, the words, definitions or text involved go to the service
+  you configure (a model on your own computer, or a provider you choose), under that
+  provider's own terms.</li>
+</ul>
+<p>GitHub's handling of this data is covered by the GitHub Privacy Statement.</p>
+
+<h2 id="providers">9. Service providers</h2>
+<p>These companies process data on our behalf, only to provide Clabbers:</p>
+<ul>
+  <li><strong>Supabase</strong>: sign-in, and the database that holds account and study data,
+  hosted in Singapore.</li>
+  <li><strong>Our web server</strong>: the <code>clabbers.app</code> website and API run on a
+  server in Singapore.</li>
+  <li><strong>Resend</strong> (which delivers through Amazon SES): sends account emails,
+  reminder emails and Contact page messages.</li>
+  <li><strong>Google</strong>: "Sign in with Google", and the Gmail inbox where Contact page
+  messages arrive.</li>
+  <li><strong>GitHub</strong>: word-list downloads, desktop app updates, and hosting for this
+  page.</li>
+</ul>
+<p>Your data may be processed outside your country, mainly in Singapore, and by these
+providers in the places where they operate.</p>
+
+<h2 id="logs">10. IP addresses and logs</h2>
+<ul>
+  <li>Like any website, our server sees your IP address when you connect. It uses it
+  briefly, in memory, to stop abuse (rate limits), and does not store it in our database.</li>
+  <li>Our server's error logs can contain internal account IDs, never passwords.</li>
+  <li>Supabase and Resend keep their own service logs, which can include IP addresses and
+  email addresses, for the periods their own policies set.</li>
+</ul>
+
+<h2 id="browser">11. Browser storage on the website</h2>
+<p>The website sets no cookies. It uses your browser's local storage for your sign-in
+session, your appearance and display settings, and unfinished daily-puzzle answers, so they
+survive a page reload. The desktop app keeps the same kind of information in its own data
+folder.</p>
+
+<h2 id="permissions">12. Device permissions</h2>
+<ul>
+  <li>Android: internet access; notifications, asked for only when you turn study reminders
+  on; and two permissions the notification library needs to keep reminders scheduled after a
+  restart (run at start-up, keep awake). A storage library Clabbers uses also lists
+  fingerprint and biometric permissions; Clabbers never uses them.</li>
+  <li>Clabbers does not use your camera, microphone, location or contacts. It reads files only
+  when you pick them (for example an image for the Contact page or a list to import), and it
+  writes to the clipboard only when you tap a copy or share button.</li>
+</ul>
+
+<h2 id="retention">13. How long we keep data</h2>
+<ul>
+  <li>Account and study data on our server: until you delete your account or ask us to.</li>
+  <li>Guest accounts: until deleted. A guest whose session ends (for example after signing out
+  or clearing the browser) cannot sign back in, but its data stays on the server until it is
+  deleted; email us with any details you have and we will remove it.</li>
+  <li>Deleted cards: restorable for about 30 days; after that only a record that the card was
+  deleted remains.</li>
+  <li>The website's technical log: the newest 500 events per account.</li>
+  <li>Contact messages: in our inbox until we delete them.</li>
+  <li>Service providers' logs and backups: for the periods their own policies set.</li>
+  <li>Data on your devices: until you clear the app's data or uninstall it. Uninstalling the
+  desktop app keeps its data folder (on Windows, <code>%APPDATA%\Clabbers</code>); delete that
+  folder to remove it.</li>
+</ul>
+
+<h2 id="delete">14. Deleting your account and data</h2>
+<h3>In the app or on the website</h3>
+<p>Open Settings, then Account, then Delete account. Type your email address and the word
+delete, then confirm with your password (or by signing in with Google again); a guest account
+types delete only. The account and everything our server keeps for it (listed in section 4)
+are deleted at once, and so is your sign-in. This cannot be undone.</p>
+<h3>By email</h3>
+<p>If you cannot use the app, email
+<a href="mailto:clabbersapp@gmail.com">clabbersapp@gmail.com</a> from the address you signed
+up with (or with any details that identify a guest account). You do not need to reinstall
+anything. We delete the account and its data the same way within 30 days and confirm by
+reply.</p>
+<h3>What stays after a deletion</h3>
+<ul>
+  <li>Other players' Versus histories keep their record of matches they played against you,
+  with your display name, score and placing.</li>
+  <li>Contact messages in our inbox, until we delete them; ask us to.</li>
+  <li>Service providers' logs and backups, until they expire.</li>
+  <li>The copy of your study data on each of your devices, which the app keeps so you can
+  still study offline, until you clear the app's data or uninstall it.</li>
+</ul>
+
+<h2 id="security">15. Security</h2>
+<ul>
+  <li>All connections between the apps, the website and our servers use HTTPS.</li>
+  <li>In our database, each account's study data is walled off from other accounts by
+  database rules that the server's own database access cannot bypass. The only data shared
+  across accounts is what section 5 describes.</li>
+  <li>Passwords are handled only by Supabase, which requires at least 8 characters with upper-
+  and lower-case letters, a digit and a symbol, and refuses passwords known from data
+  breaches.</li>
+  <li>No system is perfectly secure. If we learn of a breach that affects your data, we will
+  tell you as the law requires.</li>
+</ul>
+
+<h2 id="children">16. Children</h2>
+<p>Clabbers is not directed at children under 13, and we do not knowingly collect personal
+information from them. If you believe a child has given us personal information, email us and
+we will delete it.</p>
+
+<h2 id="choices">17. Your choices</h2>
+<ul>
+  <li>Use the apps without signing in, and nothing about your study leaves your device.</li>
+  <li>Leave the display name blank to stay off the leaderboards.</li>
+  <li>Leave reminder emails off, or unsubscribe from any reminder with one click.</li>
+  <li>Untick the diagnostics box on a bug report.</li>
+  <li>Ask us for a copy of your data, to correct it, or to delete it, at
+  <a href="mailto:clabbersapp@gmail.com">clabbersapp@gmail.com</a>. You may also have rights
+  under the privacy laws where you live; contact us to use them.</li>
+</ul>
+
+<h2 id="changes">18. Changes to this policy</h2>
+<p>If this policy changes, the new version will be published at this address with an updated
+effective date.</p>
 </body>
 </html>
