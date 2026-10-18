@@ -28,7 +28,7 @@
 </head>
 <body>
 <h1>Clabbers Privacy Policy</h1>
-<p class="meta">Applies to the Clabbers apps for Android (package <code>dev.clabbers.app</code>), iOS, Windows and macOS, and to the Clabbers website at <code>clabbers.app</code>. Effective 2026-10-01.</p>
+<p class="meta">Applies to the Clabbers apps for Android (package <code>dev.clabbers.app</code>), iOS, Windows and macOS, and to the Clabbers website at <code>clabbers.app</code>. Effective 2026-10-18.</p>
 
 <p>Clabbers is an independent word-study app for competitive word-game players. This page
 explains, in plain terms, what information Clabbers handles, why, who else processes it for
@@ -86,9 +86,13 @@ goals, game history and settings. If you never sign in, none of it leaves your d
   <li>Study reminders on phones are local notifications. The app works out how many cards are
   due on the device; nothing is sent anywhere to schedule them. They are off until you turn
   them on.</li>
-  <li>Some lists, such as the words you missed in Boggle and Wordwalls, never leave the device
-  even when you sign in.</li>
-  <li>If you import a word list or a file of your own, the app processes it on the device.</li>
+  <li>Some details never leave the device even when you sign in: the words you missed in Boggle
+  and Wordwalls, and which answers you got or missed in each review (only the counts sync).
+  Missed words you save as a deck do sync, like any deck.</li>
+  <li>The app keeps a short log of recent app events and errors on the device. It leaves the
+  device only if you attach it to a bug report (section 6).</li>
+  <li>If you import a file, such as a backup or a list of cards, the app processes it on the
+  device.</li>
 </ul>
 
 <h2 id="accounts">3. Accounts and sign-in</h2>
@@ -104,10 +108,11 @@ email address and password, with Google, or as a guest ("Try it without an accou
   password to it later and keep what you have studied.</li>
   <li>Our own database keeps, for each account: a random account ID, the sign-in ID from
   Supabase, when the account was created, and your profile: an optional display name, whether
-  you want reminder emails, and your chosen reminder hour and time zone (the website saves your
-  time zone when you save the account settings, even with reminders off).</li>
+  you want reminder emails, your chosen reminder hour and time zone, the date of the last
+  reminder sent, and a random code for the unsubscribe link. The website also saves your
+  browser's time zone, so it knows when your day starts.</li>
   <li>On a device, the app remembers which profile belongs to which account and labels it with
-  your display name or email address.</li>
+  your email address (or "Guest account"). You can rename it.</li>
 </ul>
 
 <h2 id="server">4. What our server keeps when you sign in</h2>
@@ -115,21 +120,24 @@ email address and password, with Google, or as a guest ("Try it without an accou
 so that your devices and the website can share it. It includes:</p>
 <ul>
   <li>your cards and their scheduling state, and your full review history (when you reviewed
-  each card, how you rated it, and how many answers you got or missed);</li>
+  each card, how you rated it, and how many answers you got or missed; for reviews done on the
+  website, which answers);</li>
   <li>decks (names, folders, descriptions and the search they are built from), saved lists,
   notes you write on cards, study goals and study activity;</li>
   <li>your settings (appearance, study options and similar preferences);</li>
-  <li>Wordwalls and Boggle game history;</li>
+  <li>Wordwalls and Boggle game history and, for games played on the website, the words you
+  missed;</li>
   <li>records of what you deleted, so the deletion reaches your other devices; a deleted card
   can be restored for about 30 days;</li>
   <li>a random ID for each installation of the app, used only to keep each device's changes
   apart when they sync;</li>
-  <li>Daily puzzles: when you started, the words you entered or that were accepted, your
-  scores, times, streaks and days played;</li>
-  <li>Versus: the results of your matches (each player's display name, score and placing);</li>
+  <li>Daily puzzles: when you started, your score and time and, for Daily Anagrams and Daily
+  Shiritori, the words you played (streaks and days played are worked out from these);</li>
+  <li>Versus: the results of your matches (the match settings and each player's display name,
+  score and placing), and a game-history entry for each round you play;</li>
   <li>on the website only, for accounts with an email address (not guests): a short technical
-  log of recent app events and errors, the newest 500 per account, cleaned of personal details
-  before it is stored. We use it only to find and fix problems.</li>
+  log of recent app events and errors, the newest 500 per account, with sign-in tokens removed
+  and long text cut short before it is stored. We use it only to find and fix problems.</li>
 </ul>
 <p>We use this data only to run Clabbers: to sync your study, show the leaderboards, run
 Versus matches, check daily-puzzle answers, send the reminder emails you ask for, and fix
@@ -141,17 +149,20 @@ anyone else's purposes.</p>
 <ul>
   <li>Leaderboards are visible to anyone signed in to Clabbers, including guests, and past
   days stay viewable.</li>
-  <li>You appear on them only if you have set a display name. They show your display name,
+  <li>You appear on them only if you have set a display name (each board lists its top 50).
+  They show your display name,
   rank, score or number solved, time taken, the number of words you found or played, and
   weekly totals, streaks and days played.</li>
   <li>Without a display name you are not listed, but your result still counts when ranks are
   worked out.</li>
+  <li>Leaderboards always show your current display name: changing it changes it on past days
+  too, and clearing it takes you off them.</li>
 </ul>
 <h3>Versus</h3>
 <ul>
   <li>Players in a match see each other's display name (or "Player" if none is set), live
-  scores and results. In Boggle Versus, everyone sees the words each player found once the
-  match ends.</li>
+  scores and results. In Boggle Versus, everyone sees the words each player played once the
+  match ends; in Shiritori Versus, each word is shown to the other players as it is played.</li>
   <li>The other players' apps also receive your internal account ID, a random code that does
   not contain your email address or name.</li>
   <li>Each player's match history keeps a record of the match, with the display names, scores
@@ -179,23 +190,27 @@ any images you choose to attach.</p>
 <h2 id="email">7. Emails we send</h2>
 <ul>
   <li>Account emails from Supabase, delivered through Resend: sign-up confirmation, password
-  reset, and confirmation when you add or change your email address.</li>
+  reset, confirmation when you add or change your email address, and, for an account that signs
+  in with Google only, a one-time code to confirm a change to its email or password, or its
+  deletion.</li>
   <li>Due-card reminders, only if you turn on "Email me when I have cards due" in the website's
   account settings (off by default). A reminder contains your display name, how many cards are
-  due, a link to study, and a one-click unsubscribe link, and is sent at most once a day.</li>
+  due, a link to study, and an unsubscribe link, and is sent at most once a day. Mail apps that
+  show their own Unsubscribe button unsubscribe you in one click.</li>
   <li>Our replies, if you contact us.</li>
 </ul>
 <p>We do not send marketing email.</p>
 
 <h2 id="downloads">8. Downloads and updates</h2>
 <ul>
-  <li>Word lists that are not built into the app (for example NWL2023 on phones) download
-  from GitHub when you ask for them. GitHub sees your IP address and the app's standard
-  browser details; the app sends nothing else.</li>
-  <li>The Windows app checks GitHub for updates when it starts and installs them when you
-  quit. The update tool sends GitHub a random installation ID it creates for staged
-  roll-outs, along with your IP address. The portable Windows build does not check for
-  updates.</li>
+  <li>Word lists that are not built into the app (for example NWL2023) download from GitHub
+  when you ask for them. GitHub sees your IP address and the standard details any download
+  request carries; the app sends nothing else.</li>
+  <li>The Windows app checks GitHub for updates shortly after it starts, downloads them in the
+  background, and installs them when you restart it or quit. The update tool sends GitHub a
+  random installation ID it creates for staged roll-outs, along with your IP address. The
+  portable Windows build does not check for updates, and the macOS app does not update
+  itself.</li>
   <li>The desktop app can optionally write memory hooks or deck drafts with an AI model. It is
   off by default. If you set it up, the words, definitions or text involved go to the service
   you configure (a model on your own computer, or a provider you choose), under that
@@ -222,25 +237,30 @@ providers in the places where they operate.</p>
 
 <h2 id="logs">10. IP addresses and logs</h2>
 <ul>
-  <li>Like any website, our server sees your IP address when you connect. It uses it
-  briefly, in memory, to stop abuse (rate limits), and does not store it in our database.</li>
-  <li>Our server's error logs can contain internal account IDs, never passwords.</li>
+  <li>Like any website, our server sees your IP address when you connect. It keeps it only in
+  memory, to stop abuse (rate limits), and does not store it in our database.</li>
+  <li>Our server's error logs can contain internal account IDs and, when saving something
+  fails, details of what was being saved. They never contain passwords.</li>
   <li>Supabase and Resend keep their own service logs, which can include IP addresses and
   email addresses, for the periods their own policies set.</li>
 </ul>
 
 <h2 id="browser">11. Browser storage on the website</h2>
-<p>The website sets no cookies. It uses your browser's local storage for your sign-in
-session, your appearance and display settings, and unfinished daily-puzzle answers, so they
-survive a page reload. The desktop app keeps the same kind of information in its own data
+<p>The website uses no tracking or advertising cookies; the one cookie it can set remembers
+your Interface zoom setting. It uses your browser's local storage for your sign-in session,
+your appearance, display and dictionary choices, and notes of what you have already seen; the
+tab's session storage, cleared when you close the tab, for unfinished daily-puzzle answers; and,
+while you review a Boggle round, a draft of that round in the browser's database, deleted once
+the review is saved. The desktop app keeps the same kind of information in its own data
 folder.</p>
 
 <h2 id="permissions">12. Device permissions</h2>
 <ul>
   <li>Android: internet access; notifications, asked for only when you turn study reminders
-  on; and two permissions the notification library needs to keep reminders scheduled after a
-  restart (run at start-up, keep awake). A storage library Clabbers uses also lists
-  fingerprint and biometric permissions; Clabbers never uses them.</li>
+  on; and two permissions the notification library uses to deliver reminders and keep them
+  scheduled after a restart (run at start-up, keep awake). A storage library Clabbers uses also
+  lists fingerprint and biometric permissions; Clabbers never uses them.</li>
+  <li>iOS: notifications, asked for only when you turn study reminders on.</li>
   <li>Clabbers does not use your camera, microphone, location or contacts. It reads files only
   when you pick them (for example an image for the Contact page or a list to import), and it
   writes to the clipboard only when you tap a copy or share button.</li>
@@ -252,11 +272,14 @@ folder.</p>
   <li>Guest accounts: until deleted. A guest whose session ends (for example after signing out
   or clearing the browser) cannot sign back in, but its data stays on the server until it is
   deleted; email us with any details you have and we will remove it.</li>
-  <li>Deleted cards: restorable for about 30 days; after that only a record that the card was
-  deleted remains.</li>
+  <li>Deleted cards: restorable for about 30 days. After that they cannot be restored; the copy
+  kept for restoring is removed the next time the account deletes or restores cards, and always
+  when the account is deleted. A record that the card was deleted stays, so your other devices
+  learn of it.</li>
   <li>The website's technical log: the newest 500 events per account.</li>
   <li>Contact messages: in our inbox until we delete them.</li>
   <li>Service providers' logs and backups: for the periods their own policies set.</li>
+  <li>Backup copies of our own database: until we delete them.</li>
   <li>Data on your devices: until you clear the app's data or uninstall it. Uninstalling the
   desktop app keeps its data folder (on Windows, <code>%APPDATA%\Clabbers</code>); delete that
   folder to remove it.</li>
@@ -265,9 +288,11 @@ folder.</p>
 <h2 id="delete">14. Deleting your account and data</h2>
 <h3>In the app or on the website</h3>
 <p>Open Settings, then Account, then Delete account. Type your email address and the word
-delete, then confirm with your password (or by signing in with Google again); a guest account
-types delete only. The account and everything our server keeps for it (listed in section 4)
-are deleted at once, and so is your sign-in. This cannot be undone.</p>
+delete, then confirm it is you: with your password, or, if you sign in with Google only, with a
+code we email to you (versions of the app and the website from before this change ask you to sign
+in with Google again instead). A guest account types delete only. The account and everything our
+server keeps for it (listed in section 4) are deleted at once, and so is your sign-in. This
+cannot be undone.</p>
 <h3>By email</h3>
 <p>If you cannot use the app, email
 <a href="mailto:clabbersapp@gmail.com">clabbersapp@gmail.com</a> from the address you signed
@@ -279,20 +304,24 @@ reply.</p>
   <li>Other players' Versus histories keep their record of matches they played against you,
   with your display name, score and placing.</li>
   <li>Contact messages in our inbox, until we delete them; ask us to.</li>
-  <li>Service providers' logs and backups, until they expire.</li>
+  <li>Service providers' logs and backups, until they expire, and backup copies of our own
+  database made before the deletion, until we delete them.</li>
   <li>The copy of your study data on each of your devices, which the app keeps so you can
-  still study offline, until you clear the app's data or uninstall it.</li>
+  still study offline, until you clear the app's data or uninstall it (on a computer, until
+  you delete its data folder; see section 13), and in any backup of your device that includes
+  the app.</li>
 </ul>
 
 <h2 id="security">15. Security</h2>
 <ul>
   <li>All connections between the apps, the website and our servers use HTTPS.</li>
   <li>In our database, each account's study data is walled off from other accounts by
-  database rules that the server's own database access cannot bypass. The only data shared
-  across accounts is what section 5 describes.</li>
-  <li>Passwords are handled only by Supabase, which requires at least 8 characters with upper-
-  and lower-case letters, a digit and a symbol, and refuses passwords known from data
-  breaches.</li>
+  database rules that the database enforces on every request from the app. Only our maintenance
+  tools (database upgrades, backups and the reminder emails) work across accounts. The only data
+  shared with other players is what section 5 describes.</li>
+  <li>Passwords are handled only by Supabase, which requires new passwords to have at least 8
+  characters with upper- and lower-case letters, a digit and a symbol, and refuses passwords
+  known from data breaches.</li>
   <li>No system is perfectly secure. If we learn of a breach that affects your data, we will
   tell you as the law requires.</li>
 </ul>
@@ -304,9 +333,10 @@ we will delete it.</p>
 
 <h2 id="choices">17. Your choices</h2>
 <ul>
-  <li>Use the apps without signing in, and nothing about your study leaves your device.</li>
+  <li>Use the apps without signing in, and nothing about your study leaves your device
+  (unless you set up the desktop app's optional AI features, section 8).</li>
   <li>Leave the display name blank to stay off the leaderboards.</li>
-  <li>Leave reminder emails off, or unsubscribe from any reminder with one click.</li>
+  <li>Leave reminder emails off, or unsubscribe from the link in any reminder.</li>
   <li>Untick the diagnostics box on a bug report.</li>
   <li>Ask us for a copy of your data, to correct it, or to delete it, at
   <a href="mailto:clabbersapp@gmail.com">clabbersapp@gmail.com</a>. You may also have rights
