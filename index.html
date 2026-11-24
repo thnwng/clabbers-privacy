@@ -28,7 +28,7 @@
 </head>
 <body>
 <h1>Clabbers Privacy Policy</h1>
-<p class="meta">Applies to the Clabbers apps for Android (package <code>dev.clabbers.app</code>), iOS, Windows and macOS, and to the Clabbers website at <code>clabbers.app</code>. Effective 2026-10-18.</p>
+<p class="meta">Applies to the Clabbers apps for Android (package <code>dev.clabbers.app</code>), iOS, Windows and macOS, and to the Clabbers website at <code>clabbers.app</code>. Effective 2026-11-24.</p>
 
 <p>Clabbers is an independent word-study app for competitive word-game players. This page
 explains, in plain terms, what information Clabbers handles, why, who else processes it for
@@ -108,7 +108,8 @@ email address and password, with Google, or as a guest ("Try it without an accou
   <li>A guest account is a real account with no email address. You can add an email and
   password to it later and keep what you have studied.</li>
   <li>Our own database keeps, for each account: a random account ID, the sign-in ID from
-  Supabase, when the account was created, and your profile: an optional display name, whether
+  Supabase, when the account was created, and your profile: an optional display name and an
+  optional profile picture (section 5), whether
   you want reminder emails, your chosen reminder hour and time zone, the date of the last
   reminder sent, and a random code for the unsubscribe link. The website also saves your
   browser's time zone, so it knows when your day starts.</li>
@@ -136,22 +137,40 @@ so that your devices and the website can share it. It includes:</p>
   Shiritori, the words you played (streaks and days played are worked out from these);</li>
   <li>Versus: the results of your matches (the match settings and each player's display name,
   score and placing), and a game-history entry for each round you play;</li>
+  <li>your profile picture, if you add one (section 5);</li>
+  <li>Versus room chat: the last 100 messages in each room, each with the sender's display name
+  and the time it was sent, kept with the room so a match can carry on if our server restarts;</li>
+  <li>chat reports: when you report a message, a copy of it (its text, who sent it, which room
+  and when), with your account as the one who reported it;</li>
   <li>on the website only, for accounts with an email address (not guests): a short technical
   log of recent app events and errors, the newest 500 per account, with sign-in tokens removed
   and long text cut short before it is stored. We use it only to find and fix problems.</li>
 </ul>
 <p>We use this data only to run Clabbers: to sync your study, show the leaderboards, run
-Versus matches, check daily-puzzle answers, send the reminder emails you ask for, and fix
+Versus matches and their chat, check daily-puzzle answers, send the reminder emails you ask for, and fix
 problems. We do not use it for advertising or profiling, and we do not sell or share it for
 anyone else's purposes.</p>
 
 <h2 id="others">5. What other players can see</h2>
+<h3>Profile picture</h3>
+<ul>
+  <li>You can add a profile picture in Settings, on an account with an email address (not as a
+  guest). You pick a JPG, PNG or WebP image and choose a square of it; our server keeps only a
+  small copy of that square (128 by 128 pixels), without the hidden details an image file can
+  carry, such as camera information and location. The image you picked is not stored.</li>
+  <li>Your picture is shown next to your display name on the daily leaderboards and in Versus
+  (the room, the rounds, the results and the chat).</li>
+  <li>It is served from an address that includes your internal account ID. Anyone who has that
+  address can open the picture without signing in.</li>
+  <li>Change or remove it in Settings at any time. Only your current picture is kept, and it is
+  deleted with your account.</li>
+</ul>
 <h3>Daily puzzle leaderboards</h3>
 <ul>
   <li>Leaderboards are visible to anyone signed in to Clabbers, including guests, and past
   days stay viewable.</li>
   <li>You appear on them only if you have set a display name (each board lists its top 50).
-  They show your display name,
+  They show your display name and profile picture,
   rank, score or number solved, time taken, the number of words you found or played, and
   weekly totals, streaks and days played.</li>
   <li>Without a display name you are not listed, but your result still counts when ranks are
@@ -168,6 +187,13 @@ anyone else's purposes.</p>
   not contain your email address or name.</li>
   <li>Each player's match history keeps a record of the match, with the display names, scores
   and placings of everyone in it.</li>
+  <li>Players in a Versus room can chat. Everyone in the room sees each message as it is sent,
+  with the sender's display name and profile picture, and players who join later see the
+  room's recent messages.</li>
+  <li>You can mute a player: their messages are hidden on your device, in that room, until you
+  close the tab or the app. Nothing is sent when you mute someone.</li>
+  <li>You can report another player's message. A copy of it is stored on our server (section 4);
+  the player who sent it is not told.</li>
 </ul>
 
 <h2 id="contact-form">6. The Contact page</h2>
@@ -263,7 +289,8 @@ folder.</p>
   lists fingerprint and biometric permissions; Clabbers never uses them.</li>
   <li>iOS: notifications, asked for only when you turn study reminders on.</li>
   <li>Clabbers does not use your camera, microphone, location or contacts. It reads files only
-  when you pick them (for example an image for the Contact page or a list to import), and it
+  when you pick them (for example an image for the Contact page, a profile picture or a list to
+  import), and it
   writes to the clipboard only when you tap a copy or share button.</li>
 </ul>
 
@@ -278,6 +305,12 @@ folder.</p>
   when the account is deleted. A record that the card was deleted stays, so your other devices
   learn of it.</li>
   <li>The website's technical log: the newest 500 events per account.</li>
+  <li>Your profile picture: until you change or remove it, or delete your account.</li>
+  <li>Versus room chat: the last 100 messages of a room, while the room is open. A room and its
+  chat are deleted once no player is connected and 15 minutes have passed since anything last
+  happened in it, and your rooms are deleted with your account.</li>
+  <li>Chat reports: until the account that reported the message, or the account that sent it,
+  is deleted.</li>
   <li>Contact messages: in our inbox until we delete them.</li>
   <li>Service providers' logs and backups: for the periods their own policies set.</li>
   <li>Backup copies of our own database: until we delete them.</li>
@@ -337,6 +370,7 @@ we will delete it.</p>
   <li>Use the apps without signing in, and nothing about your study leaves your device
   (unless you set up the desktop app's optional AI features, section 8).</li>
   <li>Leave the display name blank to stay off the leaderboards.</li>
+  <li>Add a profile picture only if you want one; remove it in Settings at any time.</li>
   <li>Leave reminder emails off, or unsubscribe from the link in any reminder.</li>
   <li>Untick the diagnostics box on a bug report.</li>
   <li>Ask us for a copy of your data, to correct it, or to delete it, at
